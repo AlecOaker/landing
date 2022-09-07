@@ -1,0 +1,134 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Alec\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\Alec\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files (x86)\dotnet\;C:\Program Files\nodejs\;C:\Users\Alec\AppData\Local\Microsoft\WindowsApps;C:\Users\Alec\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Alec\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Alec\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.15.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://github.com/bem-tools/bem-tools-core: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Users\Alec\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141517:19)
+      at Object.onceWrapper (node:events:641:28)
+      at ClientRequest.emit (node:events:527:28)
+      at TLSSocket.emitRequestTimeout (node:_http_client:771:9)
+      at Object.onceWrapper (node:events:641:28)
+      at TLSSocket.emit (node:events:539:35)
+      at TLSSocket.Socket._onTimeout (node:net:516:8)
+      at listOnTimeout (node:internal/timers:559:17)
+      at processTimers (node:internal/timers:502:7)
+
+npm manifest: 
+  {
+      "name": "gulp-scss-starter",
+      "description": "Frontend development with pleasure",
+      "author": "Andrey Gorokhov",
+      "license": "GPL-3.0-only",
+      "repository": {
+          "type": "git",
+          "url": "https://github.com/andreyalexeich/gulp-scss-starter.git"
+      },
+  
+      "scripts": {
+          "dev": "gulp",
+          "build": "gulp prod --production",
+          "build:views": "gulp views --production",
+          "build:styles": "gulp styles --production",
+          "build:scripts": "gulp scripts --production",
+          "build:images": "gulp images --production",
+          "build:webp": "gulp webp --production",
+          "build:sprites": "gulp sprites --production",
+          "build:fonts": "gulp fonts --production",
+          "build:favicons": "gulp favicons --production",
+          "build:gzip": "gulp gzip --production",
+          "lint:styles": "stylelint \"src/**/*.scss\"",
+          "lint:styles --fix": "stylelint --fix \"src/**/*.scss\"",
+          "lint:scripts": "eslint \"src/js/**/*.js\"",
+          "lint:scripts --fix": "eslint --fix \"src/js/**/*.js\"",
+          "bem-c": "bem create $* -l src/blocks/components",
+          "bem-m": "bem create $* -l src/blocks/modules"
+      },
+  
+      "devDependencies": {
+          "@babel/core": "^7.17.5",
+          "@babel/preset-env": "^7.16.11",
+          "@babel/register": "^7.17.0",
+          "@babel/eslint-parser": "^7.17.0",
+          "babel-loader": "^8.2.3",
+          "eslint": "^8.11.0",
+          "bem-tools-core": "bem-tools/bem-tools-core",
+          "bem-tools-create": "bem-tools/bem-tools-create",
+          "browser-sync": "^2.27.7",
+          "del": "^6.0.0",
+          "gulp": "^4.0.2",
+          "gulp-autoprefixer": "^8.0.0",
+          "gulp-clean-css": "^4.3.0",
+          "gulp-debug": "^4.0.0",
+          "gulp-favicons": "^3.0.0",
+          "gulp-file-include": "^2.3.0",
+          "gulp-group-css-media-queries": "^1.2.2",
+          "gulp-if": "^3.0.0",
+          "gulp-imagemin": "^7.1.0",
+          "gulp-newer": "^1.4.0",
+          "gulp-plumber": "^1.2.1",
+          "gulp-rename": "^2.0.0",
+          "gulp-replace": "^1.1.3",
+          "gulp-sass": "^5.1.0",
+          "gulp-sourcemaps": "^3.0.0",
+          "gulp-svg-sprite": "^1.5.0",
+          "gulp-watch": "^5.0.1",
+          "gulp-webp": "^4.0.1",
+          "husky": "^7.0.4",
+          "imagemin-giflossy": "^5.1.10",
+          "imagemin-jpeg-recompress": "^7.0.0",
+          "imagemin-mozjpeg": "^9.0.0",
+          "imagemin-pngquant": "^9.0.0",
+          "imagemin-webp": "^6.0.0",
+          "imagemin-zopfli": "^7.0.0",
+          "lint-staged": "^12.3.5",
+          "postcss": "^8.4.8",
+          "postcss-scss": "^4.0.3",
+          "require-dir": "^1.2.0",
+          "sass": "^1.49.9",
+          "stylelint": "^14.5.3",
+          "stylelint-config-standard-scss": "^3.0.0",
+          "stylelint-order": "^5.0.0",
+          "stylelint-selector-bem-pattern": "^2.1.1",
+          "yargs": "^17.3.1"
+      },
+  
+      "dependencies": {
+          "dev": "^0.1.3",
+          "webpack": "^5.70.0",
+          "webpack-stream": "^7.0.0"
+      },
+  
+      "husky": {
+          "hooks": {
+              "pre-commit": "lint-staged"
+          }
+      },
+  
+      "lint-staged": {
+          "*.scss": [
+              "stylelint --fix --allow-empty-input"
+          ],
+  
+          "*.js": [
+              "eslint --fix"
+          ]
+      }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  
